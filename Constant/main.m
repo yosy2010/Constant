@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(short, Speed) {
+    fast,
+    slow
+};
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
@@ -16,6 +21,14 @@ int main(int argc, const char * argv[]) {
         
         // define like function constanct
         NSLog(@"\n%d is larger", MAX(10, 12));
+        
+        // use NSlocal to check the currency of the location of the computer
+        NSLocale *local = [NSLocale currentLocale];
+        NSString *currency = [local objectForKey:NSLocaleCurrencyCode];
+        NSLog(@"Money is %@", currency);
+        
+        
+        
         
     }
     return 0;
