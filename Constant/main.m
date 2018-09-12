@@ -10,8 +10,13 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        
+        // log constant M_PI
+        NSLog(@"\n\u03c0 is %f", M_PI);
+        
+        // define like function constanct
+        NSLog(@"\n%d is larger", MAX(10, 12));
+        
     }
     return 0;
 }
